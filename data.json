@@ -184,7 +184,11 @@
         "LACP",
         "SD-WAN",
         "HA Fortinet",
-        "VSX"
+        "VSX",
+        "Veeam Backup & Replication",
+        "Sauvegarde 3-2-1",
+        "Routage BGP",
+        "IPsec"
       ],
       "icon": "🚨",
       "gradient": "linear-gradient(135deg, rgba(0,212,255,0.15), rgba(168,85,247,0.1))",
