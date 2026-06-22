@@ -4,9 +4,9 @@
     "lastName": "DEZOÏDE",
     "title": "Architecte Infrastructures IT",
     "description": "Passionné par les infrastructures informatiques, je conçois, déploie et sécurise des architectures réseau et cloud performantes, scalables et résilientes.",
-    "email": "jeremy.dezoide@email.com",
-    "linkedin": "https://linkedin.com/in/",
-    "github": "https://github.com/",
+    "email": "jeremy.dezoide@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-dezo%C3%AFde-b30927158/",
+    "github": "https://github.com/soap-76/",
     "available": true,
     "badgeText": "Disponible pour de nouveaux projets"
   },
@@ -91,7 +91,7 @@
       "items": [
         {
           "name": "Azure",
-          "percent": 82
+          "percent": 92
         },
         {
           "name": "Docker & Kubernetes",
@@ -171,39 +171,44 @@
   ],
   "experience": [
     {
-      "date": "2022 — Présent",
-      "role": "Ingénieur Infrastructure Cloud & Sécurité",
-      "company": "TechSecure Solutions",
-      "location": "Paris",
+      "date": "Mars 2024 — Présent",
+      "role": "Architecte infrastructures",
+      "company": "IN'LI",
+      "location": "PUTEAUX",
       "tasks": [
-        "Architecture et migration d'environnements multi-cloud (AWS, Azure)",
-        "Déploiement et gestion de firewalls nouvelle génération (Palo Alto, Fortinet)",
-        "Mise en place d'une stratégie Zero Trust et gouvernance IAM",
-        "Automatisation des déploiements via Terraform et Ansible"
+        "Garant du bon fonctionnement, de la résilience et de la sécurité des infrastructures",
+        "Intégration, évolution et gestion des infrastructures réseau et système.",
+        "Déploiement et gestion de l'infrastructure cloud Azure (machines virtuelles, applications web, IaaS/PaaS/SaaS, réseau), FinOps (réduction des coûts Azure de 30% sur un an).",
+        "Maintien en conditions de sécurité des infrastructures selon la politique de sécurité des systèmes d’information (PSSI).",
+        "Mise en place et suivi du Plan de Continuité Informatique (PCI) et de la résilience des infrastructures cloud et on-premise, taux de disponibilité augmenté de 99% à 99,97%",
+        "Modélisation de solutions d'infrastructure selon les besoins métiers.",
+        "Documentation technique des infrastructures"
       ]
     },
     {
-      "date": "2020 — 2022",
-      "role": "Administrateur Réseau & Systèmes",
-      "company": "NetCore Industries",
-      "location": "Lyon",
+      "date": "Janvier 2023 - Mars 2024",
+      "role": "Architecte réseau et sécurité",
+      "company": "IN'LI",
+      "location": "PUTEAUX",
       "tasks": [
-        "Administration d'un parc réseau Cisco (200+ équipements)",
-        "Déploiement SD-WAN multi-sites et optimisation des performances",
-        "Supervision Zabbix/Nagios et gestion des incidents N2/N3",
-        "Projet de virtualisation VMware vSphere (consolidation serveurs)"
+        "Garant de l’évolution et du maintien en conditions opérationnelles des infrastructures réseau.",
+        "Déploiement de solutions réseau (Wi-Fi, switching, firewalling) sur les différentes agences et en Data Center, au total une dizaine de sites en deux ans.",
+        "Sécurisation des flux réseau et des accès distants.",
+        "Gestion et interconnexion du réseau dans le cloud Azure.",
+        "Supervision globale du réseau et des infrastructures (environ 300 noeuds)."
       ]
     },
     {
-      "date": "2018 — 2020",
-      "role": "Technicien Infrastructure IT",
-      "company": "DataPulse Services",
-      "location": "Bordeaux",
+      "date": "Février 2020 - Janvier 2023",
+      "role": "Ingénieur réseau et sécurité",
+      "company": "FRAMEIP",
+      "location": "ESLETTES",
       "tasks": [
-        "Support N1/N2 et gestion du parc informatique (300+ postes)",
-        "Déploiement et configuration d'équipements réseau (switches, AP Wi-Fi)",
-        "Administration Active Directory et GPO",
-        "Documentation technique et procédures d'exploitation"
+        "Interventions chez divers clients sur des projets réseau et sécurité.",
+        "Firewalling, Switching, Wi-Fi, Téléphonie sur IP et Supervision.",
+        "Systèmes d'authentification complexes et architectures VPN (SSL et IPsec).",
+        "Audits réseau et sécurité, Pentest / Social Engineering.",
+        "Gestion de crise cyber et déploiement de remédiations."
       ]
     }
   ],
