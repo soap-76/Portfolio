@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Portfolio Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- ========== SIDEBAR TOGGLE (mobile) ========== -->
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu">☰</button>
+
+  <!-- ========== SIDEBAR ========== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">⚡</div>
+      <div class="sidebar-brand">
+        <span class="sidebar-brand-title">Portfolio Editor</span>
+        <span class="sidebar-brand-sub">v1.0 — Admin</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <div class="nav-item active" data-section="personal">
+        <span class="nav-icon">👤</span> Informations personnelles
+      </div>
+      <div class="nav-item" data-section="about">
+        <span class="nav-icon">📄</span> À propos
+      </div>
+      <div class="nav-item" data-section="typing">
+        <span class="nav-icon">⌨️</span> Titres animés
+      </div>
+      <div class="nav-item" data-section="skills">
+        <span class="nav-icon">🎯</span> Compétences
+      </div>
+      <div class="nav-item" data-section="projects">
+        <span class="nav-icon">🚀</span> Projets
+      </div>
+      <div class="nav-item" data-section="experience">
+        <span class="nav-icon">💼</span> Expérience
+      </div>
+      <div class="nav-item" data-section="certifications">
+        <span class="nav-icon">🏅</span> Certifications
+      </div>
+      <div class="nav-item" data-section="contact">
+        <span class="nav-icon">✉️</span> Contact
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p class="sidebar-footer-text">Portfolio Admin Panel</p>
+    </div>
+  </aside>
+
+  <!-- ========== TOPBAR ========== -->
+  <header class="topbar">
+    <div class="topbar-title">
+      <span class="topbar-title-dot"></span>
+      <span>Éditeur de Portfolio</span>
+    </div>
+    <div class="topbar-actions">
+      <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">
+        🔗 Voir le portfolio
+      </a>
+      <button class="btn btn-primary btn-sm" id="btnExport">
+        💾 Exporter data.json
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main-content">
+    <div class="content-wrapper">
+
+      <!-- ===== SECTION: Informations personnelles ===== -->
+      <section class="editor-section active" id="section-personal">
+        <div class="section-header">
+          <h2 class="section-title">👤 Informations personnelles</h2>
+          <p class="section-subtitle">Modifiez vos informations de profil et vos liens de contact.</p>
+        </div>
+
+        <div class="card card-glass">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">✏️</span> Prénom</label>
+              <input type="text" class="form-input" id="personal-firstName" placeholder="Prénom" />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">✏️</span> Nom</label>
+              <input type="text" class="form-input" id="personal-lastName" placeholder="Nom" />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label"><span class="label-icon">💼</span> Titre</label>
+              <input type="text" class="form-input" id="personal-title" placeholder="Titre professionnel" />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label"><span class="label-icon">📝</span> Description</label>
+              <textarea class="form-textarea" id="personal-description" rows="3" placeholder="Description courte"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">📧</span> Email</label>
+              <input type="email" class="form-input" id="personal-email" placeholder="email@example.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">🔗</span> LinkedIn</label>
+              <input type="url" class="form-input mono" id="personal-linkedin" placeholder="https://linkedin.com/in/..." />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">🐙</span> GitHub</label>
+              <input type="url" class="form-input mono" id="personal-github" placeholder="https://github.com/..." />
+            </div>
+            <div class="form-group">
+              <label class="form-label"><span class="label-icon">🏷️</span> Texte du badge</label>
+              <input type="text" class="form-input" id="personal-badgeText" placeholder="Disponible pour..." />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label"><span class="label-icon">✅</span> Disponibilité</label>
+              <div class="toggle-wrapper">
+                <label class="toggle">
+                  <input type="checkbox" id="personal-available" />
+                  <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label-text" id="availableLabel">Non disponible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION: À propos ===== -->
+      <section class="editor-section" id="section-about">
+        <div class="section-header">
+          <h2 class="section-title">📄 À propos</h2>
+          <p class="section-subtitle">Éditez le contenu de la section « À propos », les statistiques et le terminal.</p>
+        </div>
+
+        <!-- Title & Paragraphs -->
+        <div class="card card-glass">
+          <div class="card-header">
+            <span class="card-title"><span class="card-title-icon">📝</span> Contenu</span>
+          </div>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label">Titre de la section</label>
+              <input type="text" class="form-input" id="about-title" placeholder="Titre" />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Photo de profil</label>
+              <div class="photo-upload-wrapper">
+                <div class="photo-preview-box" id="photoPreviewBox">
+                  <span class="photo-preview-empty">Aucune image</span>
+                </div>
+                <div class="photo-upload-actions">
+                  <div class="flex gap-2">
+                    <button type="button" class="btn btn-ghost btn-sm" id="btnChoosePhoto">📁 Choisir une photo</button>
+                    <button type="button" class="btn btn-danger btn-sm" id="btnRemovePhoto" style="display:none;">✕ Supprimer</button>
+                  </div>
+                  <input type="file" id="about-photo-file" accept="image/*" style="display:none;" />
+                  <input type="text" class="form-input" id="about-photo" placeholder="Ou collez une URL / un chemin local..." />
+                </div>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Paragraphes (séparés par un double retour à la ligne)</label>
+              <textarea class="form-textarea" id="about-paragraphs" rows="8" placeholder="Paragraphe 1&#10;&#10;Paragraphe 2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="card card-glass">
+          <div class="card-header">
+            <span class="card-title"><span class="card-title-icon">📊</span> Statistiques</span>
+            <button class="btn btn-sm btn-ghost" id="addStat">＋ Ajouter</button>
+          </div>
+          <div id="statsContainer" class="flex flex-col gap-3"></div>
+        </div>
+
+        <!-- Terminal -->
+        <div class="card card-glass">
+          <div class="card-header">
+            <span class="card-title"><span class="card-title-icon">💻</span> Terminal</span>
+            <button class="btn btn-sm btn-ghost" id="addTerminal">＋ Ajouter</button>
+          </div>
+          <div id="terminalContainer" class="flex flex-col gap-3"></div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION: Titres animés ===== -->
+      <section class="editor-section" id="section-typing">
+        <div class="section-header">
+          <h2 class="section-title">⌨️ Titres animés</h2>
+          <p class="section-subtitle">Gérez les textes qui s'affichent avec l'effet de frappe sur la page d'accueil.</p>
+        </div>
+
+        <div class="card card-glass">
+          <div class="card-header">
+            <span class="card-title"><span class="card-title-icon">💬</span> Textes</span>
+            <button class="btn btn-sm btn-ghost" id="addTypingString">＋ Ajouter</button>
+          </div>
+          <div id="typingContainer" class="dynamic-list"></div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION: Compétences ===== -->
+      <section class="editor-section" id="section-skills">
+        <div class="section-header">
+          <h2 class="section-title">🎯 Compétences</h2>
+          <p class="section-subtitle">Modifiez les catégories et niveaux de compétences.</p>
+        </div>
+        <div id="skillsContainer"></div>
+      </section>
+
+      <!-- ===== SECTION: Projets ===== -->
+      <section class="editor-section" id="section-projects">
+        <div class="section-header">
+          <h2 class="section-title">🚀 Projets</h2>
+          <p class="section-subtitle">Ajoutez, modifiez ou supprimez vos projets.</p>
+        </div>
+        <div id="projectsContainer"></div>
+        <button class="add-item-btn mt-4" id="addProject">＋ Ajouter un projet</button>
+      </section>
+
+      <!-- ===== SECTION: Expérience ===== -->
+      <section class="editor-section" id="section-experience">
+        <div class="section-header">
+          <h2 class="section-title">💼 Expérience</h2>
+          <p class="section-subtitle">Gérez votre parcours professionnel.</p>
+        </div>
+        <div id="experienceContainer"></div>
+        <button class="add-item-btn mt-4" id="addExperience">＋ Ajouter une expérience</button>
+      </section>
+
+      <!-- ===== SECTION: Certifications ===== -->
+      <section class="editor-section" id="section-certifications">
+        <div class="section-header">
+          <h2 class="section-title">🏅 Certifications</h2>
+          <p class="section-subtitle">Listez vos certifications professionnelles.</p>
+        </div>
+        <div id="certificationsContainer"></div>
+        <button class="add-item-btn mt-4" id="addCertification">＋ Ajouter une certification</button>
+      </section>
+
+      <!-- ===== SECTION: Contact ===== -->
+      <section class="editor-section" id="section-contact">
+        <div class="section-header">
+          <h2 class="section-title">✉️ Contact</h2>
+          <p class="section-subtitle">Personnalisez le message de la section contact.</p>
+        </div>
+
+        <div class="card card-glass">
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label class="form-label"><span class="label-icon">📝</span> Titre</label>
+              <input type="text" class="form-input" id="contact-title" placeholder="Titre de la section contact" />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label"><span class="label-icon">💬</span> Description</label>
+              <textarea class="form-textarea" id="contact-description" rows="4" placeholder="Description"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
