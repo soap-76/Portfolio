@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const year = new Date().getFullYear();
 
     const text = document.getElementById('footer-text');
-    if (text) text.textContent = `© ${year} ${p.firstName} ${p.lastName} — Tous droits réservés`;
+    if (text) text.textContent = `© ${year} ${p.firstName} ${p.lastName} — Tous droits réservés - L'ésthétique de ce site a été réalisée via intelligence artificielle (IA)`;
 
     const links = document.getElementById('footer-links');
     if (links) {
