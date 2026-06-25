@@ -62,23 +62,50 @@
       "items": [
         {
           "name": "Firewalling",
-          "subSkills": ["Palo Alto", "Fortinet", "pfSense", "iptables", "Stormshield"]
+          "subSkills": [
+            "Palo Alto",
+            "Fortinet",
+            "Stormshield",
+            "VPN SSL",
+            "VPN IPsec"
+          ]
         },
         {
           "name": "Switching",
-          "subSkills": ["VLAN", "STP", "802.1X", "QoS", "Cisco Catalyst"]
+          "subSkills": [
+            "VLAN",
+            "VXLAN",
+            "Spanning-tree",
+            "802.1X",
+            "HPE Aruba",
+            "Storm-control",
+            "DHCP Snooping"
+          ]
         },
         {
-          "name": "SD-WAN / MPLS",
-          "subSkills": ["Cisco Viptela", "Fortinet SD-WAN", "VPN IPsec", "BGP"]
+          "name": "SD-WAN",
+          "subSkills": [
+            "Fortinet SD-WAN"
+          ]
         },
         {
           "name": "Wi-Fi Enterprise",
-          "subSkills": ["WPA3", "802.1X / RADIUS", "Aruba", "Cisco WLC"]
+          "subSkills": [
+            "Ruckus",
+            "802.1X",
+            "QoS",
+            "Audit"
+          ]
         },
         {
           "name": "Routage",
-          "subSkills": ["OSPF", "BGP", "EIGRP", "Routage statique", "Policy-Based Routing"]
+          "subSkills": [
+            "OSPF",
+            "BGP",
+            "EIGRP",
+            "Routage statique",
+            "Policy-Based Routing"
+          ]
         }
       ]
     },
@@ -89,15 +116,31 @@
       "items": [
         {
           "name": "Azure",
-          "subSkills": ["Azure AD", "VNet", "NSG", "Azure Firewall", "Logic Apps"]
+          "subSkills": [
+            "Azure AD",
+            "VNet",
+            "NSG",
+            "Azure Firewall",
+            "Logic Apps"
+          ]
         },
         {
           "name": "Docker & Kubernetes",
-          "subSkills": ["Docker Compose", "K8s Pods", "Helm", "Container Registry"]
+          "subSkills": [
+            "Docker Compose",
+            "K8s Pods",
+            "Helm",
+            "Container Registry"
+          ]
         },
         {
           "name": "Terraform / Ansible",
-          "subSkills": ["IaC", "Modules Terraform", "Playbooks Ansible", "CI/CD"]
+          "subSkills": [
+            "IaC",
+            "Modules Terraform",
+            "Playbooks Ansible",
+            "CI/CD"
+          ]
         }
       ]
     },
@@ -108,19 +151,39 @@
       "items": [
         {
           "name": "CNAPP",
-          "subSkills": ["Prisma Cloud", "CSPM", "CWPP", "Container Security"]
+          "subSkills": [
+            "Prisma Cloud",
+            "CSPM",
+            "CWPP",
+            "Container Security"
+          ]
         },
         {
           "name": "SIEM / SOC",
-          "subSkills": ["Splunk", "Microsoft Sentinel", "Log Management", "Alerting"]
+          "subSkills": [
+            "Splunk",
+            "Microsoft Sentinel",
+            "Log Management",
+            "Alerting"
+          ]
         },
         {
           "name": "Zero Trust / IAM",
-          "subSkills": ["Conditional Access", "MFA", "PAM", "RBAC"]
+          "subSkills": [
+            "Conditional Access",
+            "MFA",
+            "PAM",
+            "RBAC"
+          ]
         },
         {
           "name": "Pentesting / Audit",
-          "subSkills": ["Nmap", "Burp Suite", "Metasploit", "OWASP"]
+          "subSkills": [
+            "Nmap",
+            "Burp Suite",
+            "Metasploit",
+            "OWASP"
+          ]
         }
       ]
     }
