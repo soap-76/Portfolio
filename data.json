@@ -17,23 +17,7 @@
       "Fort de plusieurs années d'expérience dans le domaine des infrastructures IT, je me spécialise dans la conception, le déploiement et la sécurisation d'environnements réseau et cloud. Mon approche combine rigueur technique et vision stratégique pour répondre aux enjeux de performance et de sécurité des entreprises.",
       "De l'architecture réseau on-premise aux environnements multi-cloud, en passant par l'automatisation et la cybersécurité, je m'efforce de maîtriser l'ensemble de la chaîne d'infrastructure pour offrir des solutions robustes et évolutives."
     ],
-    "stats": [
-      {
-        "value": 5,
-        "suffix": "+",
-        "label": "Années d'exp."
-      },
-      {
-        "value": 30,
-        "suffix": "+",
-        "label": "Projets réalisés"
-      },
-      {
-        "value": 15,
-        "suffix": "+",
-        "label": "Certifications"
-      }
-    ],
+    "stats": [],
     "terminal": [
       {
         "command": "whoami",
@@ -41,7 +25,7 @@
       },
       {
         "command": "uptime",
-        "output": "5+ ans d'expérience"
+        "output": "6 ans d'expérience"
       },
       {
         "command": "ping jdezoide.fr",

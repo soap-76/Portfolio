@@ -98,16 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
       terminal.innerHTML = commandLines + cursorLine;
     }
 
-    // Stats
-    const stats = document.getElementById('about-stats');
-    if (stats && a.stats) {
-      stats.innerHTML = a.stats.map(s =>
-        `<div class="stat-item">
-          <div class="stat-number" data-count="${s.value}" data-suffix="${s.suffix || ''}">0</div>
-          <div class="stat-label">${s.label}</div>
-        </div>`
-      ).join('');
-    }
   }
 
   // ---------- SKILLS ----------
@@ -490,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initMobileNav();
     initScrollReveal();
-    initStatCounters();
+
     initContactForm();
     initSmoothScroll();
   }
@@ -758,35 +748,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
   }
 
-
-  // =============================================
-  // 7. STAT COUNTER ANIMATION
-  // =============================================
-  function initStatCounters() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target;
-          const finalValue = parseInt(target.dataset.count);
-          const suffix = target.dataset.suffix || '';
-          let current = 0;
-          const increment = finalValue / 60;
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= finalValue) {
-              current = finalValue;
-              clearInterval(timer);
-            }
-            target.textContent = Math.floor(current) + suffix;
-          }, 25);
-          counterObserver.unobserve(target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    statNumbers.forEach(el => counterObserver.observe(el));
-  }
 
   // =============================================
   // 8. CONTACT FORM

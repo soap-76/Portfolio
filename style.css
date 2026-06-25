@@ -618,43 +618,7 @@ body::after {
   line-height: 1.8;
 }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
 
-.stat-item {
-  text-align: center;
-  padding: 20px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  transition: var(--transition-base);
-}
-
-.stat-item:hover {
-  border-color: var(--border-glow);
-  box-shadow: var(--shadow-glow-sm);
-}
-
-.stat-number {
-  font-family: var(--font-mono);
-  font-size: 2rem;
-  font-weight: 800;
-  background: var(--gradient-main);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.stat-label {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-  font-weight: 500;
-}
 
 /* ---------- SKILLS SECTION ---------- */
 .skills-grid {
@@ -1399,14 +1363,7 @@ body::after {
     justify-content: center;
   }
 
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
 
-  .stat-number {
-    font-size: 1.5rem;
-  }
 
   .about-terminal-deco {
     position: relative;
