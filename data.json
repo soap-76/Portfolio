@@ -67,7 +67,9 @@
             "Fortinet",
             "Stormshield",
             "VPN SSL",
-            "VPN IPsec"
+            "VPN IPsec",
+            "Segmentation",
+            "Filtrage"
           ]
         },
         {
