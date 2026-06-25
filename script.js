@@ -119,19 +119,46 @@ document.addEventListener('DOMContentLoaded', () => {
       `<div class="skill-category reveal reveal-delay-${i + 1}">
         <div class="skill-category-icon ${cat.colorClass}">${cat.icon}</div>
         <h3>${cat.category}</h3>
-        ${cat.items.map(skill =>
-          `<div class="skill-item">
-            <div class="skill-header">
-              <span class="skill-name">${skill.name}</span>
-              <span class="skill-percent">${skill.percent}%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill ${cat.barClass}" data-width="${skill.percent}%"></div>
-            </div>
-          </div>`
-        ).join('')}
+        <div class="skill-tags">
+          ${cat.items.map((skill, j) =>
+            `<div class="skill-tag-wrapper">
+              <button class="skill-tag ${cat.colorClass}" data-cat="${i}" data-skill="${j}">
+                ${skill.name}
+                ${skill.subSkills && skill.subSkills.length ? '<span class="skill-tag-chevron">›</span>' : ''}
+              </button>
+              ${skill.subSkills && skill.subSkills.length ?
+                `<div class="skill-sub-panel" id="sub-${i}-${j}">
+                  ${skill.subSkills.map(sub => `<span class="skill-sub-tag ${cat.colorClass}">${sub}</span>`).join('')}
+                </div>` : ''}
+            </div>`
+          ).join('')}
+        </div>
       </div>`
     ).join('');
+
+    // Toggle sub-skills on click
+    grid.querySelectorAll('.skill-tag').forEach(tag => {
+      tag.addEventListener('click', () => {
+        const catIdx = tag.dataset.cat;
+        const skillIdx = tag.dataset.skill;
+        const panel = document.getElementById(`sub-${catIdx}-${skillIdx}`);
+        if (!panel) return;
+
+        const isOpen = tag.classList.contains('active');
+
+        // Close all open panels in same category
+        tag.closest('.skill-category').querySelectorAll('.skill-tag.active').forEach(t => {
+          t.classList.remove('active');
+          const p = document.getElementById(`sub-${t.dataset.cat}-${t.dataset.skill}`);
+          if (p) p.classList.remove('open');
+        });
+
+        if (!isOpen) {
+          tag.classList.add('active');
+          panel.classList.add('open');
+        }
+      });
+    });
   }
 
   // ---------- PROJECTS ----------
@@ -463,7 +490,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initMobileNav();
     initScrollReveal();
-    initSkillBars();
     initStatCounters();
     initContactForm();
     initSmoothScroll();
@@ -732,23 +758,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
   }
 
-  // =============================================
-  // 6. SKILL BAR ANIMATION
-  // =============================================
-  function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-bar-fill');
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target;
-          target.style.width = target.dataset.width;
-          skillObserver.unobserve(target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    skillBars.forEach(bar => skillObserver.observe(bar));
-  }
 
   // =============================================
   // 7. STAT COUNTER ANIMATION

@@ -729,58 +729,156 @@ body::after {
   color: var(--text-primary);
 }
 
-.skill-item {
-  margin-bottom: 20px;
-}
-
-.skill-item:last-child {
-  margin-bottom: 0;
-}
-
-.skill-header {
+/* Skill Tags Container */
+.skill-tags {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag-wrapper {
+  position: relative;
+}
+
+/* Main Skill Badge */
+.skill-tag {
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 8px;
-}
-
-.skill-name {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.skill-percent {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.skill-bar {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.05);
+  gap: 6px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.skill-tag.network {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: var(--accent-cyan);
+}
+
+.skill-tag.cloud {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: var(--accent-purple);
+}
+
+.skill-tag.security {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: var(--accent-green);
+}
+
+.skill-tag:hover,
+.skill-tag.active {
+  transform: translateY(-2px);
+}
+
+.skill-tag.network:hover,
+.skill-tag.network.active {
+  background: rgba(0, 212, 255, 0.18);
+  border-color: rgba(0, 212, 255, 0.55);
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.2);
+}
+
+.skill-tag.cloud:hover,
+.skill-tag.cloud.active {
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.2);
+}
+
+.skill-tag.security:hover,
+.skill-tag.security.active {
+  background: rgba(0, 255, 136, 0.18);
+  border-color: rgba(0, 255, 136, 0.55);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.2);
+}
+
+.skill-tag-chevron {
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+}
+
+.skill-tag.active .skill-tag-chevron {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+/* Sub-Skills Panel */
+.skill-sub-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 0;
   overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  margin-top: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              padding 0.3s ease,
+              margin-top 0.3s ease;
 }
 
-.skill-bar-fill {
-  height: 100%;
+.skill-sub-panel.open {
+  max-height: 200px;
+  opacity: 1;
+  padding: 8px 0 4px;
+  margin-top: 4px;
+}
+
+/* Sub-Skill Tags */
+.skill-sub-tag {
+  display: inline-block;
+  padding: 4px 12px;
   border-radius: var(--radius-full);
-  width: 0;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  animation: fadeInTag 0.3s ease forwards;
+  opacity: 0;
 }
 
-.skill-bar-fill.cyan {
-  background: linear-gradient(90deg, var(--accent-cyan), #47e0ff);
+.skill-sub-tag:nth-child(1) { animation-delay: 0.05s; }
+.skill-sub-tag:nth-child(2) { animation-delay: 0.1s; }
+.skill-sub-tag:nth-child(3) { animation-delay: 0.15s; }
+.skill-sub-tag:nth-child(4) { animation-delay: 0.2s; }
+.skill-sub-tag:nth-child(5) { animation-delay: 0.25s; }
+
+.skill-sub-panel.open .skill-sub-tag {
+  opacity: 0;
+  animation: fadeInTag 0.3s ease forwards;
 }
 
-.skill-bar-fill.purple {
-  background: linear-gradient(90deg, var(--accent-purple), #c084fc);
+@keyframes fadeInTag {
+  from { opacity: 0; transform: translateY(4px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.skill-bar-fill.green {
-  background: linear-gradient(90deg, var(--accent-green), #4ade80);
+.skill-sub-tag.network {
+  background: rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.15);
+  color: rgba(0, 212, 255, 0.8);
+}
+
+.skill-sub-tag.cloud {
+  background: rgba(168, 85, 247, 0.06);
+  border-color: rgba(168, 85, 247, 0.15);
+  color: rgba(168, 85, 247, 0.8);
+}
+
+.skill-sub-tag.security {
+  background: rgba(0, 255, 136, 0.06);
+  border-color: rgba(0, 255, 136, 0.15);
+  color: rgba(0, 255, 136, 0.8);
 }
 
 /* ---------- PROJECTS SECTION ---------- */

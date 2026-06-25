@@ -59,27 +59,26 @@
       "category": "Réseau",
       "icon": "🌐",
       "colorClass": "network",
-      "barClass": "cyan",
       "items": [
         {
           "name": "Firewalling",
-          "percent": 99
+          "subSkills": ["Palo Alto", "Fortinet", "pfSense", "iptables", "Stormshield"]
         },
         {
           "name": "Switching",
-          "percent": 99
+          "subSkills": ["VLAN", "STP", "802.1X", "QoS", "Cisco Catalyst"]
         },
         {
           "name": "SD-WAN / MPLS",
-          "percent": 91
+          "subSkills": ["Cisco Viptela", "Fortinet SD-WAN", "VPN IPsec", "BGP"]
         },
         {
           "name": "Wi-Fi Enterprise",
-          "percent": 92
+          "subSkills": ["WPA3", "802.1X / RADIUS", "Aruba", "Cisco WLC"]
         },
         {
-          "name": "Routage statique & dynamique",
-          "percent": 94
+          "name": "Routage",
+          "subSkills": ["OSPF", "BGP", "EIGRP", "Routage statique", "Policy-Based Routing"]
         }
       ]
     },
@@ -87,19 +86,18 @@
       "category": "Cloud & DevOps",
       "icon": "☁️",
       "colorClass": "cloud",
-      "barClass": "purple",
       "items": [
         {
           "name": "Azure",
-          "percent": 92
+          "subSkills": ["Azure AD", "VNet", "NSG", "Azure Firewall", "Logic Apps"]
         },
         {
           "name": "Docker & Kubernetes",
-          "percent": 78
+          "subSkills": ["Docker Compose", "K8s Pods", "Helm", "Container Registry"]
         },
         {
           "name": "Terraform / Ansible",
-          "percent": 85
+          "subSkills": ["IaC", "Modules Terraform", "Playbooks Ansible", "CI/CD"]
         }
       ]
     },
@@ -107,23 +105,22 @@
       "category": "Cybersécurité",
       "icon": "🔒",
       "colorClass": "security",
-      "barClass": "green",
       "items": [
         {
           "name": "CNAPP",
-          "percent": 89
+          "subSkills": ["Prisma Cloud", "CSPM", "CWPP", "Container Security"]
         },
         {
           "name": "SIEM / SOC",
-          "percent": 80
+          "subSkills": ["Splunk", "Microsoft Sentinel", "Log Management", "Alerting"]
         },
         {
           "name": "Zero Trust / IAM",
-          "percent": 90
+          "subSkills": ["Conditional Access", "MFA", "PAM", "RBAC"]
         },
         {
           "name": "Pentesting / Audit",
-          "percent": 70
+          "subSkills": ["Nmap", "Burp Suite", "Metasploit", "OWASP"]
         }
       ]
     }
