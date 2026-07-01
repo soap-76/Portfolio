@@ -53,7 +53,8 @@
             "VPN SSL",
             "Segmentation",
             "Filtrage",
-            "IPS/IDS"
+            "IPS/IDS",
+            "WAF Fortinet"
           ]
         },
         {
@@ -108,7 +109,7 @@
             "VM",
             "VNet",
             "NSG",
-            "Azure Firewall",
+            "Front Door WAF",
             "App Services",
             "SQL Server",
             "FinOps",
