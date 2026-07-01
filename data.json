@@ -51,9 +51,9 @@
             "Fortinet",
             "Stormshield",
             "VPN SSL",
-            "VPN IPsec",
             "Segmentation",
-            "Filtrage"
+            "Filtrage",
+            "IPS/IDS"
           ]
         },
         {
@@ -72,7 +72,9 @@
         {
           "name": "SD-WAN",
           "subSkills": [
-            "Fortinet SD-WAN"
+            "Fortinet SD-WAN",
+            "FortiManager",
+            "VPN IPsec"
           ]
         },
         {
@@ -109,7 +111,8 @@
             "Azure Firewall",
             "App Services",
             "SQL Server",
-            "FinOps"
+            "FinOps",
+            "Key Vaults"
           ]
         },
         {
@@ -123,12 +126,12 @@
           ]
         },
         {
-          "name": "Terraform / Ansible",
+          "name": "Infrastructure as Code",
           "subSkills": [
-            "IaC",
-            "Modules Terraform",
-            "Playbooks Ansible",
-            "CI/CD"
+            "Terraform",
+            "Ansible",
+            "CI/CD",
+            "Azure DevOps"
           ]
         },
         {
@@ -173,16 +176,16 @@
             "Active Directory",
             "Entra ID",
             "SSO",
-            "ZTNA Fortinet"
+            "ZTNA Fortinet",
+            "FortiClient EMS",
+            "Tier Model"
           ]
         },
         {
-          "name": "Pentesting / Audit",
+          "name": "EDR & Patch Management",
           "subSkills": [
-            "Nmap",
-            "Burp Suite",
-            "Metasploit",
-            "OWASP"
+            "SentinelOne EDR",
+            "Ninja One"
           ]
         }
       ]
